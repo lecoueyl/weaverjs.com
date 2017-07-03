@@ -1,0 +1,12 @@
+.c-logo {
+}
+
+.c-logo__title {
+  margin-top: -10px;
+  opacity: 0;
+  animation-delay: 0.3s;
+
+  @include iota-breakpoint(xs) {
+    margin-top: -5px;
+  }
+}

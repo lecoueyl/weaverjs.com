@@ -1,0 +1,80 @@
+$iota-components-button-padding: (
+  null: 22px 20px,
+  sm: 22px 40px,
+  md: 22px 60px
+);
+$iota-components-button-color: $color-white;
+$iota-components-button-background: $color-blue;
+
+
+// Options
+
+$iota-components-button: true;
+
+$iota-components-button-namespace: 'button' !default;
+
+$iota-components-button-margin: 0 !default;
+$iota-components-button-padding: $iota-global-gutter-default !default;
+$iota-components-button-border: none !default;
+
+
+// Helper Local Variables
+
+$iota-components-button-var-button: $iota-global-components-namespace + $iota-components-button-namespace;
+
+
+
+// Button Component
+
+.#{$iota-components-button-var-button} {
+  display: inline-block;
+  @include _iota-generate-unit('margin', null, $iota-components-button-margin);
+  @include _iota-generate-unit('padding', null, $iota-components-button-padding);
+  font: inherit;
+  color: $iota-components-button-color;
+  white-space: nowrap;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: $iota-components-button-border;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 17px;
+  line-height: 21px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  transition: background-color 1s, box-shadow 0.7s;
+
+  @include iota-breakpoint(xs) {
+    display: block
+  }
+}
+
+// Primary
+
+.#{$iota-components-button-var-button}--primary {
+  background-color: $color-blue;
+}
+
+.#{$iota-components-button-var-button}--primary:hover {
+  background-color: darken($color-blue, 5%)
+}
+
+.#{$iota-components-button-var-button}--primary:active {
+  background-color: darken($color-blue, 10%)
+}
+
+// Shadow
+
+.#{$iota-components-button-var-button}--shadow {
+  box-shadow: 0 20px 30px 0 rgba(black, 0.2);
+}
+
+.#{$iota-components-button-var-button}--shadow:hover {
+  box-shadow: 0 0 30px 0 rgba(black, 0.2);
+}
+
+.#{$iota-components-button-var-button}--shadow:active {
+  box-shadow: 0 0;
+}

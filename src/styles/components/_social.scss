@@ -1,0 +1,7 @@
+.c-social .c-link {
+  color: $color-black;
+}
+
+.c-social .c-link:not(:first-child) {
+  padding-left: $iota-global-gutter-default;
+}
