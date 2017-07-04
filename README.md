@@ -33,3 +33,9 @@ npm run stg
 ```
 npm run prd
 ```
+
+#### Push on Githu Pages
+
+```
+npm run github
+```
