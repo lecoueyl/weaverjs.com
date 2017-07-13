@@ -1,1 +1,1 @@
-//= include components/sample.js
+//= include components/googleAnalytics.js
